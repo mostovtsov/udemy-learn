@@ -3,6 +3,7 @@ console.log('Starting app.js');
 const fs = require('fs');
 
 var logNote = (note) => {
+    debugger;
     console.log('------------');
     console.log(`Title: ${note.title}`);
     console.log(`Title: ${note.body}`);
@@ -21,9 +22,7 @@ var saveNotes = (notes) => {
     fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 };
 
-
 var addNote = (title, body) => {
-
     var notes = fetchNotes();
     var note = {
         title,
@@ -68,7 +67,3 @@ module.exports = {
     removeNote,
     logNote
 }
-
-// module.exports.add = function(a, b) {
-//     return a + b;
-// };
