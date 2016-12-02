@@ -9,7 +9,12 @@
             "request": "launch",
             "name": "Launch Program",
             "program": "${workspaceRoot}\\app.js",
-            "cwd": "${workspaceRoot}"
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "add",
+                "--title=title1",
+                "--body=body new1"
+            ]
         },
         {
             "type": "node",

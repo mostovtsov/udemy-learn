@@ -1,4 +1,4 @@
-console.log('Starting app.js');
+//console.log('Starting app.js');
 
 const fs = require('fs');
 
@@ -57,7 +57,7 @@ var removeNote = (title) => {
 };
 
 var getAll = () => {
-    console.log('Get all notes')
+    return fetchNotes();
 }
 
 module.exports = {
