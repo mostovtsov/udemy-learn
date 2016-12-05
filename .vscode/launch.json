@@ -8,12 +8,12 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\app.js",
+            "program": "${workspaceRoot}\\Weather-app\\app.js",
             "cwd": "${workspaceRoot}",
             "args": [
-                "add",
-                "--title=title1",
-                "--body=body new1"
+                //"add",
+                "--a=Gomel"
+                //,                "--body=body new1"
             ]
         },
         {
