@@ -8,6 +8,24 @@ it('should add two numbers', () => {
     expect(res).toBe(expected).toBeA('number');
 });
 
+it('should async add two numbers', (done) => {
+    utils.asyncAdd(33, 11, (sum) => {
+        var expected = 44;
+        expect(sum).toBe(expected).toBeA('number');
+        done();
+    });
+
+});
+
+it('should async square a number', (done) => {
+    utils.asyncSquare(3, (square) => {
+        var expected = 9;
+        expect(square).toBe(expected).toBeA('number');
+        done();
+    });
+
+});
+
 it(`should square a number`, () => {
     var res = utils.square(10);
     var expected = 100;
