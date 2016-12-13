@@ -14,28 +14,28 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     }
     console.log('Connected to MongoDb server');
 
-    // db.collection('Todos').insertOne({
-    //     text: 'something to do',
-    //     completed: false
-    // }, (err, result) => {
-    //     if (err) {
-    //         return console.log('unable to insert todo', err);
-    //     }
-
-    //     console.log(JSON.stringify(result.ops))
-    // })
-
-    db.collection('Users').insertOne({
-        name: 'Sasha with id',
-        age: 28,
-        location: 'Gomel, Belarus'
+    db.collection('Todos').insertOne({
+        text: 'something to do',
+        completed: false
     }, (err, result) => {
         if (err) {
-            return console.log('unable to insert User', err);
+            return console.log('unable to insert todo', err);
         }
 
-        console.log(result.ops[0]._id.getTimestamp());
+        console.log(JSON.stringify(result.ops))
     })
+
+    // db.collection('Users').insertOne({
+    //     name: 'Sasha with id',
+    //     age: 28,
+    //     location: 'Gomel, Belarus'
+    // }, (err, result) => {
+    //     if (err) {
+    //         return console.log('unable to insert User', err);
+    //     }
+
+    //     console.log(result.ops[0]._id.getTimestamp());
+    // })
 
     db.close();
 });
